@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+}
+
+/* 左侧菜单栏 */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100vh;
+  background: #2c3e50;
+  z-index: 10;
+  padding: 20px 0;
+}
+.menu-item {
+  color: #fff;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: background 0.2s;
+}
+.menu-item:hover {
+  background: #34495e;
+}
+
+/* 画布外层容器：弹性左右布局 */
+.canvas-wrap {
+  margin-left: 200px; /* 避让左侧菜单 */
+  height: 100vh;
+  display: flex;
+}
+
+/* 左右两个画布容器 各占50% */
+.canvas-left,
+.canvas-right {
+  flex: 1;
+  height: 100%;
+  border-right: 1px solid #eee; /* 分割线 */
+}
